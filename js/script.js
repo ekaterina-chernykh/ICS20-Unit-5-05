@@ -1,7 +1,7 @@
 // Copyright (c) 2022 Ekaterina All rights reserved
 //
 // Created by: Ekaterina
-// Created on: Oct 2022
+// Created on: Nov 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -44,15 +44,22 @@ function myButtonClicked() {
     ) *
     (180 / Math.PI)
 
+    const sumOfAngles = Number((angleA).toFixed(2)) + Number((angleB).toFixed(2)) + Number((angleC).toFixed(2))
+    document.getElementById("sumOfAllAngles").innerHTML =
+    "The sum of a all the angles are " + sumOfAngles
+
   if (angleA == angleB && angleA == angleC) {
     document.getElementById("answer").innerHTML =
       "You have an equilateral triangle"
-  } else if (angleA != angleB && angleA != angleC) {
+  } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
     document.getElementById("answer").innerHTML = "You have an scalene triangle"
   } else if (angleA != angleB && angleA == angleC) {
     document.getElementById("answer").innerHTML =
       "You have an isosceles triangle"
   } else if (angleA == angleB && angleA != angleC) {
+    document.getElementById("answer").innerHTML =
+      "You have an isosceles triangle"
+  } else if (angleC == angleB && angleA != angleC) {
     document.getElementById("answer").innerHTML =
       "You have an isosceles triangle"
   } else {
