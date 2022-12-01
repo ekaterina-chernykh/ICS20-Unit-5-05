@@ -45,7 +45,19 @@ function myButtonClicked() {
     (180 / Math.PI)
 
   if (angleA == angleB && angleA == angleC) {
-    document.getElementById("answers").innerHTML =
-      "You have an equilateral triangle"
+    document.getElementById("answer").innerHTML =
+      "You have an equilateral triangle";
+  } else if ((angleA != angleB) && (angleA != angleC)) {
+      document.getElementById("answer").innerHTML =
+        "You have an scalene triangle";
+  } else if ((angleA != angleB) && (angleA == angleC)) {
+      document.getElementById("answer").innerHTML =
+        "You have an isosceles triangle";
+  } else if ((angleA == angleB) && (angleA != angleC)) {
+    document.getElementById("answer").innerHTML =
+      "You have an isosceles triangle";
+  } else {
+      document.getElementById("answer").innerHTML =
+        "Not a triangle";
   }
 }
