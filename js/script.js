@@ -19,11 +19,22 @@ if (navigator.serviceWorker) {
  * This function displays an alert.
  */
 function myButtonClicked() {
-  // input
-  const height = parseFloat(document.getElementById("height").value)
+  const lengthAString = document.getElementById("lengthA").value
+  const lengthBString = document.getElementById("lengthB").value
+  const lengthCString = document.getElementById("lengthC").value
 
-  // process
-  const volume = 2
-  // output
-  document.getElementById("volume").innerHTML = "Volume is: " + volume + "mm³"
+  const lengthA = parseFloat(lengthAString)
+  const lengthB = parseFloat(lengthBString)
+  const lengthC = parseFloat(lengthCString)
+
+  // using the cosine law
+  const angleA = Math.acos((lengthB**2 + lengthC**2 - lengthA**2) / (2 * lengthB * lengthC)) * (180/Math.PI)
+  const angleB = Math.acos((lengthC**2 + lengthA**2 - lengthB**2) / (2 * lengthC * lengthA)) * (180/Math.PI)
+  const angleC = Math.acos((lengthA**2 + lengthB**2 - lengthC**2) / (2 * lengthA * lengthB)) * (180/Math.PI)
+
+  if ((angleA == angleB) && (angleA == angleC)) {
+    document.getElementById("answers").innerHTML =
+      ("You have an equilateral triangle")
+  }
+
 }
