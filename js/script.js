@@ -44,13 +44,6 @@ function myButtonClicked() {
     ) *
     (180 / Math.PI)
 
-  const sumOfAngles =
-    Number(angleA.toFixed(2)) +
-    Number(angleB.toFixed(2)) +
-    Number(angleC.toFixed(2))
-  document.getElementById("sumOfAllAngles").innerHTML =
-    "The sum of a all the angles are " + sumOfAngles
-
   if (angleA == angleB && angleA == angleC) {
     document.getElementById("answer").innerHTML =
       "You have an equilateral triangle"
