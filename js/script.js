@@ -44,6 +44,7 @@ function myButtonClicked() {
     ) *
     (180 / Math.PI)
 
+  if (angleA + angleB + angleC == 180) {
   if (angleA == angleB && angleA == angleC) {
     document.getElementById("answer").innerHTML =
       "You have an equilateral triangle"
@@ -55,10 +56,10 @@ function myButtonClicked() {
   } else if (angleA == angleB && angleA != angleC) {
     document.getElementById("answer").innerHTML =
       "You have an isosceles triangle"
-  } else if (angleC == angleB && angleA != angleC) {
+  } else (angleC == angleB && angleA != angleC) {
     document.getElementById("answer").innerHTML =
       "You have an isosceles triangle"
-  } else {
+  }} else {
     document.getElementById("answer").innerHTML = "Not a triangle"
   }
 }
