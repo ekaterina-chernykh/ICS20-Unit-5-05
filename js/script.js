@@ -45,21 +45,24 @@ function myButtonClicked() {
     (180 / Math.PI)
 
   if (angleA + angleB + angleC == 180) {
-  if (angleA == angleB && angleA == angleC) {
-    document.getElementById("answer").innerHTML =
-      "You have an equilateral triangle"
-  } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
-    document.getElementById("answer").innerHTML = "You have an scalene triangle"
-  } else if (angleA != angleB && angleA == angleC) {
-    document.getElementById("answer").innerHTML =
-      "You have an isosceles triangle"
-  } else if (angleA == angleB && angleA != angleC) {
-    document.getElementById("answer").innerHTML =
-      "You have an isosceles triangle"
-  } else (angleC == angleB && angleA != angleC); {
-    document.getElementById("answer").innerHTML =
-      "You have an isosceles triangle"
-  }} else {
+    if (angleA == angleB && angleA == angleC) {
+      document.getElementById("answer").innerHTML =
+        "You have an equilateral triangle"
+    } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
+      document.getElementById("answer").innerHTML =
+        "You have an scalene triangle"
+    } else if (angleA != angleB && angleA == angleC) {
+      document.getElementById("answer").innerHTML =
+        "You have an isosceles triangle"
+    } else if (angleA == angleB && angleA != angleC) {
+      document.getElementById("answer").innerHTML =
+        "You have an isosceles triangle"
+    } else angleC == angleB && angleA != angleC
+    {
+      document.getElementById("answer").innerHTML =
+        "You have an isosceles triangle"
+    }
+  } else {
     document.getElementById("answer").innerHTML = "Not a triangle"
   }
 }
