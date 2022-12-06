@@ -44,7 +44,7 @@ function myButtonClicked() {
     ) *
     (180 / Math.PI)
 
-  const sumOfAngles = angleA + angleB + angleC
+  let sumOfAngles = angleA + angleB + angleC
 
   if (sumOfAngles == 180) {
     if (angleA == angleB && angleA == angleC) {
