@@ -46,7 +46,7 @@ function myButtonClicked() {
 
   let sumOfAngles = angleA + angleB + angleC
 
-  if (sumOfAngles == 180) {
+  if (parseInt(sumOfAngles) == 180) {
     if (angleA == angleB && angleA == angleC) {
       document.getElementById("answer").innerHTML =
         "You have an equilateral triangle"
