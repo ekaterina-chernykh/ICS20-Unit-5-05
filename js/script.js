@@ -59,8 +59,7 @@ function myButtonClicked() {
     } else if (angleA == angleB && angleA != angleC) {
       document.getElementById("answer").innerHTML =
         "You have an isosceles triangle"
-    } else if (angleC == angleB && angleA != angleC)
-    {
+    } else if (angleC == angleB && angleA != angleC) {
       document.getElementById("answer").innerHTML =
         "You have an isosceles triangle"
     }
